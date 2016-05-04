@@ -26,6 +26,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'therubyracer'  # If using Ruby
+gem 'therubyrhino'  # If using JRuby
+gem 'jquery-rails'  # If using Bootstrap's JS plugins.
+gem 'less-rails-bootstrap'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
