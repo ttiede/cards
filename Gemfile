@@ -45,3 +45,7 @@ group :development do
   gem 'spring'
 end
 
+#AUTH
+gem 'devise'
+gem 'cancancan'
+gem 'rolify'
