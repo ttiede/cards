@@ -30,6 +30,7 @@ gem 'therubyracer'  # If using Ruby
 gem 'therubyrhino'  # If using JRuby
 gem 'jquery-rails'  # If using Bootstrap's JS plugins.
 gem 'less-rails-bootstrap'
+gem 'bootstrap-sass'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -46,9 +47,18 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
+  # Rails layout
+  gem 'rails_layout'
+  
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+group :production do
+  gem 'rails_12factor', '0.0.2'
+end
+
+gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 
 #AUTH
 gem 'devise'
