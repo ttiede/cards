@@ -58,6 +58,9 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+# taggable
+gem 'acts-as-taggable-on', '~> 3.4'
+
 #Slug url
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 
