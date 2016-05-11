@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511150332) do
+ActiveRecord::Schema.define(version: 20160511194840) do
+
+  create_table "authors", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "authorships", force: :cascade do |t|
+    t.integer  "book_id"
+    t.integer  "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "authorships", ["author_id"], name: "index_authorships_on_author_id"
+  add_index "authorships", ["book_id"], name: "index_authorships_on_book_id"
+
+  create_table "books", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cards", force: :cascade do |t|
     t.string   "name"
@@ -67,6 +89,22 @@ ActiveRecord::Schema.define(version: 20160511150332) do
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+
+  create_table "tokens", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tokenships", force: :cascade do |t|
+    t.integer  "card_id"
+    t.integer  "token_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "tokenships", ["card_id"], name: "index_tokenships_on_card_id"
+  add_index "tokenships", ["token_id"], name: "index_tokenships_on_token_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

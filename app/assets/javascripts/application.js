@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
+//= require jquery.tokeninput
+//= require bootstrap-tokenfield
 //= require_tree .

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :authors
+  resources :books
   resources :cards
   resources :contacts
   devise_for :users

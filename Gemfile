@@ -58,6 +58,8 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+gem 'chosen-rails'
+
 # taggable
 gem 'acts-as-taggable-on', '~> 3.4'
 
